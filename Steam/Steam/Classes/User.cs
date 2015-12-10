@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace SteamLibrary
@@ -117,21 +118,25 @@ namespace SteamLibrary
 
         public User(string email, string password)
         {
-            SqlConnection con = DBAccess();
-            SqlDataReader MyReader = getDataFromDB(con, "SELECT * FROM [User] WHERE email LIKE '" + email + "' AND password LIKE '" + password + "'");
-
-            MyReader.Read();
-            this.ID = Convert.ToInt32(MyReader["ID"].ToString());
-            this.numberOfGames = Convert.ToInt32(MyReader["numberOfGames"].ToString());
-            this.phoneNumber = MyReader["phoneNumber"].ToString();
-            try
+            //SqlConnection con = DBAccess();
+            
+            SqlDataReader MyReader = DatabaseAccess.getDataFromDB("SELECT * FROM [User] WHERE email LIKE '" + email + "' AND password LIKE '" + password + "'");
+            if (MyReader != null)
             {
-                this.privacySettings = Convert.ToInt32(MyReader["privacySettings"]);
+                MyReader.Read();
+                this.ID = Convert.ToInt32(MyReader["ID"].ToString());
+                this.numberOfGames = Convert.ToInt32(MyReader["numberOfGames"].ToString());
+                this.phoneNumber = MyReader["phoneNumber"].ToString();
+                try
+                {
+                    this.privacySettings = Convert.ToInt32(MyReader["privacySettings"]);
+                }
+                catch { }
+                this.userName = MyReader["userName"].ToString();
+                this.email = email;
+                this.password = password;
+                DatabaseAccess.CloseConnection();
             }
-            catch { }
-            this.userName = MyReader["userName"].ToString();
-            this.email = email;
-            this.password = password;
         }
 
         public virtual bool VerifyConfirmationCode(string code)
@@ -178,42 +183,6 @@ namespace SteamLibrary
         public virtual int GetPrivacySettings()
         {
             throw new System.NotImplementedException();
-        }
-
-        //public virtual bool ChangeAddress(Address newAddress)
-        //{
-        //    throw new System.NotImplementedException();
-        //}
-
-        //(int GameID, bool[] achiev, float hours, int ID, int save)
-
-        private SqlConnection DBAccess()
-        {
-            SqlConnection con = new SqlConnection(ExternalDefinitions.connectionString);
-
-            try
-            {
-                con.Open();
-            }
-            catch (Exception e)
-            {
-            }
-            return con;
-        }
-        private SqlDataReader getDataFromDB(SqlConnection con, string command)
-        {
-            SqlDataReader myReader = null;
-
-            SqlCommand pesquisa = new SqlCommand(command, con);
-            try
-            {
-                myReader = pesquisa.ExecuteReader();
-                return myReader;
-            }
-            catch
-            {
-                return null;
-            }
         }
     }
 }

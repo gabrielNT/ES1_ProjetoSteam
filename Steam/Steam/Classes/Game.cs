@@ -75,8 +75,8 @@ namespace SteamLibrary
 
         protected bool GetGameInformationFromDB()
         {
-            SqlConnection con = DBAccess();
-            SqlDataReader MyReader = getDataFromDB(con, "SELECT * FROM [Game] WHERE ID = '" + this.gameID.ToString() + "'");
+            
+            SqlDataReader MyReader = DatabaseAccess.getDataFromDB("SELECT * FROM [Game] WHERE ID = '" + this.gameID.ToString() + "'");
             if (MyReader == null)
                 return false;
 
@@ -110,36 +110,6 @@ namespace SteamLibrary
             throw new System.NotImplementedException(); //IMPLEMENTAR ISSO AQUI
         }
 
-        private SqlConnection DBAccess()
-        {
-            SqlConnection con = new SqlConnection(ExternalDefinitions.connectionString);
-
-            try
-            {
-                con.Open();
-            }
-            catch (Exception e)
-            {
-            }
-            return con;
-        }
-        private SqlDataReader getDataFromDB(SqlConnection con, string command)
-        {
-            SqlDataReader myReader = null;
-
-            SqlCommand pesquisa = new SqlCommand(command, con);
-            try
-            {
-                myReader = pesquisa.ExecuteReader();
-                return myReader;
-            }
-            catch
-            {
-                return null;
-            }
-
-
-        }
     }
 }
 

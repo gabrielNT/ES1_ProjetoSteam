@@ -321,6 +321,7 @@
             this.Location = new System.Drawing.Point(5, 5);
             this.Name = "frm_steamLibrary";
             this.Text = "Steam Library";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_steamLibrary_FormClosed);
             this.Load += new System.EventHandler(this.frm_steamLibrary_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

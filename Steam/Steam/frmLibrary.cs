@@ -20,9 +20,12 @@ namespace SteamLibrary
         
         GameOfLibrary[] userGames;
 
+        public User usuario;
+
         private void frm_steamLibrary_Load(object sender, EventArgs e)
         {
-            
+
+                     
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(ClientSize.Width / 30, 0);
             userGames = new GameOfLibrary[30];
@@ -37,7 +40,7 @@ namespace SteamLibrary
 
             lblNumberOfGames.Text = "80";
             
-            User usuario = new User("email", "lala");
+            //User usuario = new User("email", "lala");
             lblUserName.Text = usuario.getName();
             int numberofGames = RetrieveGamesFromBD(usuario.getID());
             lblNumberOfGames.Text = numberofGames.ToString();
@@ -59,8 +62,7 @@ namespace SteamLibrary
             float hours;
             int ID;
             int counter = 0;
-		    SqlConnection con = DBAccess();
-            SqlDataReader MyReader = getDataFromDB(con, "SELECT * FROM [GameOfLibrary] WHERE userID = " + userid);
+            SqlDataReader MyReader = DatabaseAccess.getDataFromDB("SELECT * FROM [GameOfLibrary] WHERE userID = " + userid);
             if (MyReader == null)
                 return 0;
             while (MyReader.Read())
@@ -71,6 +73,7 @@ namespace SteamLibrary
                 userGames[counter] = new GameOfLibrary(gameID,hours,userid );
                 counter++;
             }
+            MyReader.Close();
             return counter;
         }
 
@@ -103,33 +106,9 @@ namespace SteamLibrary
             lblDescription.Text = userGames[i].getDescription();
         }
 
-        private SqlDataReader getDataFromDB(SqlConnection con, string command)
+        private void frm_steamLibrary_FormClosed(object sender, FormClosedEventArgs e)
         {
-            SqlDataReader myReader = null;
-
-            SqlCommand pesquisa = new SqlCommand(command, con);
-            try
-            {
-                myReader = pesquisa.ExecuteReader();
-                return myReader;
-            }
-            catch
-            {
-                return null;
-            }
-        }
-        private SqlConnection DBAccess()
-        {
-            SqlConnection con = new SqlConnection(ExternalDefinitions.connectionString);
-
-            try
-            {
-                con.Open();
-            }
-            catch (Exception e)
-            {
-            }
-            return con;
+            //this.Parent.Show();
         }
     }
 }

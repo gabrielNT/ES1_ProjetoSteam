@@ -8378,7 +8378,7 @@ SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8734,7 +8734,7 @@ SELECT gameOfLibraryID, achievementID, isCompleted FROM AchievementOfLibrary WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9059,7 +9059,7 @@ SELECT gameID, dotNet, directX, java, physX, visualCpp FROM AdditionalSoftware W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9398,7 +9398,7 @@ SELECT userID, city, country, state, zipCode, Address FROM Address WHERE (userID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9825,7 +9825,7 @@ SELECT gameID, linux, mac, windows FROM CompatibleSystem WHERE (gameID = @gameID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10143,7 +10143,7 @@ SELECT ID, name, description, userID FROM DiscussionGroup WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10510,7 +10510,7 @@ SELECT ID, groupID, userID, date, text, title FROM DiscussionTopic WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10880,7 +10880,7 @@ SELECT ID, name, version, fileSize, description FROM Game WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11261,7 +11261,7 @@ SELECT ID, hoursPlayed, userID, gameID FROM GameOfLibrary WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11568,7 +11568,7 @@ SELECT gameOfStoreID, orderID FROM GameOfOrder WHERE (gameOfStoreID = @gameOfSto
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11884,7 +11884,7 @@ SELECT gameID, price, unitSold, numberOfReviews, positiveReviews FROM GameOfStor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12212,7 +12212,7 @@ SELECT ID, isPositive, reviewText, gameID, userID FROM GameReview WHERE (ID = @I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12559,7 +12559,7 @@ SELECT ID, expirationDate, isPaid, paymentMethod, userID FROM [Order] WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12881,7 +12881,7 @@ SELECT userID, name, profileText, pictureAddress FROM Profile WHERE (userID = @u
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13269,7 +13269,7 @@ SELECT ID, topicID, userID, date, text, title FROM Reply WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13650,7 +13650,7 @@ SELECT ID, email, numberOfGames, password, phoneNumber, privacySettings, userNam
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString1;
+            this._connection.ConnectionString = global::SteamLibrary.Properties.Settings.Default.DBSteamConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

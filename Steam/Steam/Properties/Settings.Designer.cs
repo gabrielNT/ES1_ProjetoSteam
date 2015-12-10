@@ -44,5 +44,16 @@ namespace SteamLibrary.Properties {
                 return ((string)(this["DBSteamConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=D:\\Repositórios\\ES1_ProjetoSteam\\Ste" +
+            "am\\SteamDB\\DBSteam.mdf;Integrated Security=True")]
+        public string DBSteamConnectionString3 {
+            get {
+                return ((string)(this["DBSteamConnectionString3"]));
+            }
+        }
     }
 }

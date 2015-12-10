@@ -11,7 +11,7 @@ namespace SteamLibrary
 {
     public static class ExternalDefinitions
     {
-        public static string connectionString = Properties.Settings.Default.DBSteamConnectionString1;
+        public static string connectionString = Properties.Settings.Default.DBSteamConnectionString3;
         public static int x = 10;
     }
 }

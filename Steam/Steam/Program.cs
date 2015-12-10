@@ -16,7 +16,7 @@ namespace SteamLibrary
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_steamLibrary());
+            Application.Run(new frmLogin());
 
         }
     }

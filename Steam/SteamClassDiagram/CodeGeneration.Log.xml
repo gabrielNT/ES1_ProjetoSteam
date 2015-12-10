@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-11-14T22:20:16" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2015-11-14T22:20:16" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2015-11-14T22:20:16" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-11-14T22:20:16" Importance="Diagnostic" Text="ProjectPath = ..\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:16" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-11-14T22:20:16" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-11-14T22:20:16" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-11-14T22:20:16" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-11-14T22:20:16" Importance="Medium" Text="SteamProject's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'SteamProject::GameOfLibrary' -  (Class), 'SteamProject::User' -  (Class), 'SteamProject::Address' -  (Class), 'SteamProject::Game' -  (Class), 'SteamProject::ShoppingCart' -  (Class), 'SteamProject::Order' -  (Class), 'SteamProject::Profile' -  (Class), 'SteamProject::DiscussionGroup' -  (Class), 'SteamProject::GameOfStore' -  (Class), 'SteamProject::GameReview' -  (Class), 'SteamProject::Reply' -  (Class), 'SteamProject::DiscussionTopic' -  (Class) " />
+  <Error Timestamp="2015-11-14T22:20:17" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:17" Importance="Diagnostic" Text="'SteamProject::GameOfLibrary' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:17" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:17" Importance="Diagnostic" Text="'SteamProject::User' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:17" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:17" Importance="Diagnostic" Text="'SteamProject::Address' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:18" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:18" Importance="Diagnostic" Text="'SteamProject::Game' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:18" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:18" Importance="Diagnostic" Text="'SteamProject::ShoppingCart' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:18" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:18" Importance="Diagnostic" Text="'SteamProject::Order' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:18" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:18" Importance="Diagnostic" Text="'SteamProject::Profile' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:18" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:18" Importance="Diagnostic" Text="'SteamProject::DiscussionGroup' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:19" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::GameOfStore' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:19" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::GameReview' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:19" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::Reply' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:19" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::DiscussionTopic' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="Name = EnumTemplate" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="ProjectPath = ..\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Medium" Text="SteamProject's Text Template Binding: 'EnumTemplate' will apply EnumTemplate.t4 to: 'SteamProject::CompatibleSystem' -  (Enumeration), 'SteamProject::Status' -  (Enumeration), 'SteamProject::AdditionalSoftware' -  (Enumeration), 'SteamProject::PaymentMethod' -  (Enumeration) " />
+  <Error Timestamp="2015-11-14T22:20:19" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::CompatibleSystem' -  (Enumeration): no file generated because the 'AppliesToElement' method of the template 'EnumTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:19" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::Status' -  (Enumeration): no file generated because the 'AppliesToElement' method of the template 'EnumTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:19" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::AdditionalSoftware' -  (Enumeration): no file generated because the 'AppliesToElement' method of the template 'EnumTemplate.t4' evaluated to false." />
+  <Error Timestamp="2015-11-14T22:20:19" Importance="High" Text="Cannot create the following project because another project might exist in the same location, or the solution might have a project with the same name: C:\Users\victo\OneDrive\SteamProject\FINAL\negrisse\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::PaymentMethod' -  (Enumeration): no file generated because the 'AppliesToElement' method of the template 'EnumTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="ProjectPath = ..\SteamProjectLib\SteamProjectLib.csproj" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Medium" Text="SteamProject's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'SteamProject::GameOfLibrary' -  (Class), 'SteamProject::User' -  (Class), 'SteamProject::Address' -  (Class), 'SteamProject::Game' -  (Class), 'SteamProject::ShoppingCart' -  (Class), 'SteamProject::Order' -  (Class), 'SteamProject::Profile' -  (Class), 'SteamProject::DiscussionGroup' -  (Class), 'SteamProject::GameOfStore' -  (Class), 'SteamProject::GameReview' -  (Class), 'SteamProject::Reply' -  (Class), 'SteamProject::DiscussionTopic' -  (Class) " />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::GameOfLibrary' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::User' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:19" Importance="Diagnostic" Text="'SteamProject::Address' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::Game' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::ShoppingCart' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::Order' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::Profile' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::DiscussionGroup' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::GameOfStore' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::GameReview' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::Reply' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::DiscussionTopic' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="The selection included 20 elements which were not bound to a template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::Has' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::Resides In' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'40b68074-49ea-4249-b8ee-9f18a60eacac' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::builds a' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::makes an' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::is associated with' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::generates an' -  (Dependency): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::participates in' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'7378d05c-4e64-468e-be9e-6f827e47a72d' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::makes a' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::writes a' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::creates a' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::is evaluated by' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="Diagnostic" Text="'SteamProject::' -  (Association): no bound template." />
+  <Message Timestamp="2015-11-14T22:20:20" Importance="High" Text="Code generation complete. Errors: 16. Warnings: 0." />
+</Log>

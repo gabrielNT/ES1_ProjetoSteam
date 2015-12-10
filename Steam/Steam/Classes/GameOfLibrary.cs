@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
 
 namespace SteamLibrary
 {
@@ -37,11 +38,7 @@ namespace SteamLibrary
             set;
         }
 
-        private bool[] AchievementsUnlocked
-        {
-            get;
-            set;
-        }
+        private bool[] AchievementsUnlocked;
 
         public virtual bool CheckInstallation()
         {
@@ -97,18 +94,32 @@ namespace SteamLibrary
         {
             return this.HoursPlayed;
         }
-
+        private int userID;
         public virtual string RetrieveSavedGame()
         {
             throw new System.NotImplementedException();
         }
 
-        public GameOfLibrary(int GameID, float hours, int ID)
+        public GameOfLibrary(int GameID, float hours, int GLID, int userID)
         {
             this.gameID = GameID;
             this.HoursPlayed = hours;
-            this.ID = ID;
+            this.ID = GLID;
+            this.userID = userID;
             GetGameInformationFromDB();
+            checkAchievements();
+        }
+
+        private void checkAchievements()
+        {
+            SqlDataReader MyReader2 = DatabaseAccess.getDataFromDB("SELECT * FROM [AchievementOfLibrary] WHERE gameOfLibraryID = '" + this.ID + "'");
+            int i = 0;
+            while (MyReader2.Read())
+            {
+                this.AchievementsUnlocked[i] = Convert.ToBoolean(Convert.ToInt32(MyReader2["isCompleted"].ToString()));
+                i++;
+            }
+            DatabaseAccess.CloseConnection();
         }
 
     }

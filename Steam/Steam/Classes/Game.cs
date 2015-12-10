@@ -45,11 +45,14 @@ namespace SteamLibrary
             set;
         }
 
-        private string[] achievementsVector
+        public struct Achievements
         {
-            get;
-            set;
+            public int ID;
+            public string name;
+            public string description;
         }
+
+        public Achievements[] achievementsvector;
 
         public virtual IEnumerable<CompatibleSystem> CompatibleSystem
         {
@@ -86,6 +89,19 @@ namespace SteamLibrary
             this.version = MyReader["version"].ToString();
             this.fileSize = (float)Convert.ToDouble(MyReader["fileSize"].ToString());
             this.name = MyReader["name"].ToString();
+            DatabaseAccess.CloseConnection();
+
+            // ACHIEVEMENTS DO JOGO
+            SqlDataReader MyReader2 = DatabaseAccess.getDataFromDB("SELECT * FROM [Achievement] WHERE gameID = '" + this.gameID.ToString() + "' ORDER BY ID");
+            int i = 0;
+            while (MyReader2.Read())
+            {
+                this.achievementsvector[i].ID = Convert.ToInt32(MyReader2["ID"].ToString());
+                this.achievementsvector[i].name = MyReader2["name"].ToString();
+                this.achievementsvector[i].description = MyReader2["description"].ToString();
+                i++;             
+            }
+            DatabaseAccess.CloseConnection();
 
             return true;
         }
@@ -105,11 +121,16 @@ namespace SteamLibrary
             return description;
         }
 
-        public string getAchievement(int which)
+        public Achievements getAchievement(int which)
         {
-            throw new System.NotImplementedException(); //IMPLEMENTAR ISSO AQUI
-        }
+            Achievements aux;
+            int tamanho = this.achievementsvector.GetLength(0);
 
+            aux.ID = this.achievementsvector[which].ID;
+            aux.name = this.achievementsvector[which].name;
+            aux.description = this.achievementsvector[which].description;
+            return aux;
+        }
     }
 }
 

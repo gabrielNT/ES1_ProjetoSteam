@@ -11,7 +11,8 @@ namespace SteamLibrary
 {
     public static class ExternalDefinitions
     {
-        public static string connectionString = Properties.Settings.Default.DBSteamConnectionString3;
-        public static int x = 10;
+        public static string connectionString = @"Data Source=(LocalDB)\v11.0;" +
+                                                  @"AttachDbFilename=C:\olar\DBSteam.mdf;
+                                                  Integrated Security=True;Connect Timeout=30";
     }
 }

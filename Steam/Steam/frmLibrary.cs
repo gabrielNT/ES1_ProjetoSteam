@@ -61,19 +61,20 @@ namespace SteamLibrary
         public int RetrieveGamesFromBD(int userid)
 	    {
             int gameID;
+            int gameofLibraryID;
             bool [] ach;
             float hours;
             int ID;
             int counter = 0;
             SqlDataReader MyReader = DatabaseAccess.getDataFromDB("SELECT * FROM [GameOfLibrary] WHERE userID = " + userid);
-            if (MyReader == null)
+            if (MyReader.HasRows == false )
                 return 0;
             while (MyReader.Read())
             {
-                
-                gameID = Convert.ToInt32(MyReader["ID"].ToString());
+                gameofLibraryID = Convert.ToInt32(MyReader["ID"].ToString());
+                gameID = Convert.ToInt32(MyReader["gameID"].ToString());
                 hours = (float)Convert.ToDouble(MyReader["hoursPlayed"].ToString());
-                userGames[counter] = new GameOfLibrary(gameID,hours,userid );
+                userGames[counter] = new GameOfLibrary(gameID,hours,gameofLibraryID , userid);
                 counter++;
             }
             MyReader.Close();

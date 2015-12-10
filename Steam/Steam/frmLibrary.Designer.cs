@@ -106,9 +106,10 @@
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblDescription.Location = new System.Drawing.Point(416, 163);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(783, 31);
+            this.lblDescription.Size = new System.Drawing.Size(807, 31);
             this.lblDescription.TabIndex = 5;
-            this.lblDescription.Text = "label1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            this.lblDescription.Text = "                                                                                 " +
+    "                                                   ";
             // 
             // label2
             // 

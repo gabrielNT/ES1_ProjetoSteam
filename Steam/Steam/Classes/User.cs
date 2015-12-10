@@ -184,5 +184,13 @@ namespace SteamLibrary
         {
             throw new System.NotImplementedException();
         }
+
+        public static bool exists(string email)
+        {
+            SqlDataReader MyReader = DatabaseAccess.getDataFromDB("SELECT * FROM [User] WHERE email LIKE '" + email + "'");
+            if (MyReader.HasRows == false)
+                return false;
+            return true;
+        }
     }
 }

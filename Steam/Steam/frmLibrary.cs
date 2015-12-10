@@ -24,35 +24,38 @@ namespace SteamLibrary
 
         private void frm_steamLibrary_Load(object sender, EventArgs e)
         {
-
-                     
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(ClientSize.Width / 30, 0);
             userGames = new GameOfLibrary[30];
-            
-            lblDescription.Text = "Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_ Descrição_";
-            
-            lblDescription.MaximumSize = new Size(780, 4 * lblDescription.Height);
-            
-            lblAchievementDescription.MaximumSize = new Size(780, 2 * lblDescription.Height);
-            
-            lblHoursPlayed.Text = "189.8";
-
-            lblNumberOfGames.Text = "80";
-            
-            //User usuario = new User("email", "lala");
-            lblUserName.Text = usuario.getName();
             int numberofGames = RetrieveGamesFromBD(usuario.getID());
-            lblNumberOfGames.Text = numberofGames.ToString();
             for (int i = 0; i < numberofGames; i++)
             {
                 string gameName = userGames[i].GetName();
                 lbGames.Items.Add(gameName);
             }
-            lblGameName.Text = userGames[0].GetName();
-            lblHoursPlayed.Text = userGames[0].GetHoursPlayed().ToString();
-            lblDescription.Text = userGames[0].getDescription();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(ClientSize.Width / 30, 0);
+            
+            lblUserName.Text = usuario.getName();
+            if (numberofGames > 0)
+            {
+                
+                lblDescription.MaximumSize = new Size(780, 4 * lblDescription.Height);
+                
+                lblAchievementDescription.MaximumSize = new Size(780, 2 * lblDescription.Height);
 
+                lblNumberOfGames.Text = numberofGames.ToString();               
+           
+                lblGameName.Text = userGames[0].GetName();
+                lblHoursPlayed.Text = userGames[0].GetHoursPlayed().ToString();
+                lblDescription.Text = userGames[0].getDescription();
+            }
+            else
+            { 
+                lblGameName.Text = "0 Games";
+                lblHoursPlayed.Text = "xx.x";
+                lblDescription.Text = "No description";
+                lblAchievementDescription.Text = "                                                          ";
+                lblIsIntalled.Text = "";
+            }
         }
 
         public int RetrieveGamesFromBD(int userid)

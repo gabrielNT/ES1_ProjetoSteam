@@ -23,12 +23,10 @@ namespace SteamLibrary
             this.txtUsername.Clear();
             this.BackColor = Color.Black;
             this.ForeColor = Color.White;
+            txtUsername.Focus();
             btnSignIn.ForeColor = Color.Black;
             btnSignUp.ForeColor = Color.Black;
-            if (DatabaseAccess.isConnected())
-            { 
-                //faz a query
-            }
+            
         }
 
         private void btnSignInClick(object sender, EventArgs e)
@@ -44,9 +42,29 @@ namespace SteamLibrary
             }
             catch 
             {
-                MessageBox.Show("Usuário Inexistente!");
+                MessageBox.Show("The specified user does not exist");
+                frmLogin_Load(new object(), new EventArgs());
             }
 
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            if (User.exists(txtUsername.Text))
+            {
+                MessageBox.Show("The username is already in use, choose another one");
+                frmLogin_Load(new object(), new EventArgs());
+            }
+            else
+            {
+                frmSignUp signup = new frmSignUp();
+                signup.typedUsername = this.txtUsername.Text;
+                signup.typedPassword = this.txtPassword.Text;
+                this.Hide();
+                signup.ShowDialog();
+                this.Show();
+                frmLogin_Load(new object(), new EventArgs());
+            }
         }
     }
 }

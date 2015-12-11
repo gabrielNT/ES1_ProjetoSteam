@@ -120,7 +120,7 @@ namespace SteamLibrary
         {
             //SqlConnection con = DBAccess();
             
-            SqlDataReader MyReader = DatabaseAccess.getDataFromDB("SELECT * FROM [User] WHERE email LIKE '" + email + "' AND password LIKE '" + password + "'");
+            SqlDataReader MyReader = DatabaseAccess.getDataFromDB("SELECT * FROM [User] WHERE userName LIKE '" + email + "' AND password LIKE '" + password + "'");
             if (MyReader != null)
             {
                 MyReader.Read();

@@ -35,9 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNickName = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtZipCode = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
@@ -53,7 +51,7 @@
             // 
             this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSignUp.Location = new System.Drawing.Point(231, 357);
+            this.btnSignUp.Location = new System.Drawing.Point(146, 297);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(87, 40);
             this.btnSignUp.TabIndex = 12;
@@ -118,15 +116,6 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Phone Number";
             // 
-            // txtNickName
-            // 
-            this.txtNickName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNickName.Location = new System.Drawing.Point(10, 301);
-            this.txtNickName.Name = "txtNickName";
-            this.txtNickName.Size = new System.Drawing.Size(138, 29);
-            this.txtNickName.TabIndex = 15;
-            this.txtNickName.UseSystemPasswordChar = true;
-            // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,16 +123,6 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(138, 29);
             this.txtPhoneNumber.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 274);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 24);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Nickname";
             // 
             // label6
             // 
@@ -223,7 +202,7 @@
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBack.Location = new System.Drawing.Point(92, 357);
+            this.btnBack.Location = new System.Drawing.Point(18, 297);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(87, 40);
             this.btnBack.TabIndex = 25;
@@ -236,7 +215,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(421, 409);
+            this.ClientSize = new System.Drawing.Size(420, 351);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtZipCode);
@@ -247,9 +226,7 @@
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNickName);
             this.Controls.Add(this.txtPhoneNumber);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtEmail);
@@ -274,9 +251,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNickName;
         private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtZipCode;
         private System.Windows.Forms.TextBox txtCity;

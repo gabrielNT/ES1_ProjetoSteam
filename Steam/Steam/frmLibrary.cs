@@ -19,16 +19,21 @@ namespace SteamLibrary
         }
         
         GameOfLibrary[] userGames;
-
+        string[] gameArray;
+        int numberofGames;
         public User usuario;
 
         private void frm_steamLibrary_Load(object sender, EventArgs e)
         {
+            this.lbGames.Items.Clear();
             userGames = new GameOfLibrary[30];
-            int numberofGames = RetrieveGamesFromBD(usuario.getID());
+            gameArray = new string[30];
+
+            numberofGames = RetrieveGamesFromBD(usuario.getID());
             for (int i = 0; i < numberofGames; i++)
             {
                 string gameName = userGames[i].GetName();
+                gameArray[i] = gameName;
                 lbGames.Items.Add(gameName);
             }
             this.StartPosition = FormStartPosition.Manual;
@@ -62,9 +67,7 @@ namespace SteamLibrary
 	    {
             int gameID;
             int gameofLibraryID;
-            bool [] ach;
             float hours;
-            int ID;
             int counter = 0;
             SqlDataReader MyReader = DatabaseAccess.getDataFromDB("SELECT * FROM [GameOfLibrary] WHERE userID = " + userid);
             if (MyReader.HasRows == false )
@@ -126,6 +129,7 @@ namespace SteamLibrary
                 {
                     cmbAchievements.Items.Add(userGames[i].achievementsvector[j].name);
                     j++;
+
                 }
                 catch 
                 { 
@@ -168,6 +172,22 @@ namespace SteamLibrary
         private void button2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnStore_Click(object sender, EventArgs e)
+        {
+            frmStore frmstore = new frmStore();
+            this.Hide();
+            frmstore.userName = this.usuario.getName();
+            int j = numberofGames;
+            frmstore.gameArray = new string[j];
+            for (int i = 0; i < j; i++)
+                frmstore.gameArray[i] = this.gameArray[i];
+            frmstore.librarySize =j;
+            frmstore.userID = usuario.getID();
+            frmstore.ShowDialog();
+            this.Show();
+            frm_steamLibrary_Load(new object(), new EventArgs());
         }
     }
 }

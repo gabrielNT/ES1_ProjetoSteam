@@ -45,21 +45,6 @@ namespace SteamLibrary
 
         }
 
-        /*
-        public static SqlDataAdapter putDataIntoDB(string command)
-        {
-            databaseConnection();
-
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DBSteamDataSet db = new DBSteamDataSet();
-
-
-            adapter.SelectCommand = new SqlCommand(command, con);
-            adapter.Fill(db);
-        }
-
-*/
-
         public static void CloseConnection()
         {
             myReader.Close();

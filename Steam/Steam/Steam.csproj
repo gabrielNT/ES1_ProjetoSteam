@@ -65,6 +65,7 @@
     <Compile Include="Classes\ExternalDefinitions.cs" />
     <Compile Include="Classes\Game.cs" />
     <Compile Include="Classes\GameOfLibrary.cs" />
+    <Compile Include="Classes\GameOfStore.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="DBSteamDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -89,6 +90,12 @@
     <Compile Include="frmSignUp.Designer.cs">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStore.Designer.cs">
+      <DependentUpon>frmStore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLibrary.resx">
@@ -99,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStore.resx">
+      <DependentUpon>frmStore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

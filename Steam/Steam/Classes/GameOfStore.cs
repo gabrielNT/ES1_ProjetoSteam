@@ -9,57 +9,65 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class GameOfStore : Game
-{
-	private float price
-	{
-		get;
-		set;
-	}
+namespace SteamLibrary { 
+    public class GameOfStore : Game
+    {
+	    private float price
+	    {
+		    get;
+		    set;
+	    }
 
-	private int unitSold
-	{
-		get;
-		set;
-	}
+	    private int unitSold
+	    {
+		    get;
+		    set;
+	    }
 
-	private int numberOfReviews
-	{
-		get;
-		set;
-	}
+	    private int numberOfReviews
+	    {
+		    get;
+		    set;
+	    }
 
-	private float positiveReviewsPercentagem
-	{
-		get;
-		set;
-	}
+	    private float positiveReviewsPercentagem
+	    {
+		    get;    
+		    set;
+	    }
 
-	public virtual IEnumerable<GameReview> GameReview
-	{
-		get;
-		set;
-	}
+        //public virtual IEnumerable<GameReview> GameReview
+        //{
+        //    get;
+        //    set;
+        //}
 
-	private float getPrice()
-	{
-		throw new System.NotImplementedException();
-	}
+	    public float getPrice()
+	    {
+		    return this.price;
+	    }
 
-	private int getUnitSold()
-	{
-		throw new System.NotImplementedException();
-	}
+	    public int getUnitSold()
+	    {
+            return this.unitSold;
+	    }
 
-	private int getNumberOfReviews()
-	{
-		throw new System.NotImplementedException();
-	}
+	    private int getNumberOfReviews()
+	    {
+		    throw new System.NotImplementedException();
+	    }
 
-	private float getPositiveReviesPercentage()
-	{
-		throw new System.NotImplementedException();
-	}
+	    private float getPositiveReviesPercentage()
+	    {
+		    throw new System.NotImplementedException();
+	    }
 
+        public GameOfStore(int ID,float price, int unitsSold)
+        {
+            this.gameID = ID;
+            this.price = price;
+            this.unitSold = unitsSold;
+            GetGameInformationFromDB();
+        }
+    }
 }
-

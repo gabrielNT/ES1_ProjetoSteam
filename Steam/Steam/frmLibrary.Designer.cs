@@ -41,11 +41,12 @@
             this.lblAchievementDescription = new System.Windows.Forms.Label();
             this.lblNM = new System.Windows.Forms.Label();
             this.lblIsIntalled = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnInstall = new System.Windows.Forms.Button();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblNumberOfGames = new System.Windows.Forms.Label();
             this.lblIsCompleted = new System.Windows.Forms.Label();
+            this.btnStore = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbGames
@@ -205,28 +206,26 @@
             this.lblIsIntalled.TabIndex = 16;
             this.lblIsIntalled.Text = "( Not Installed )";
             // 
-            // button1
+            // btnInstall
             // 
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(481, 539);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 54);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Install / Uninstall";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInstall.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstall.Location = new System.Drawing.Point(421, 539);
+            this.btnInstall.Name = "btnInstall";
+            this.btnInstall.Size = new System.Drawing.Size(230, 54);
+            this.btnInstall.TabIndex = 17;
+            this.btnInstall.Text = "Install / Uninstall";
+            this.btnInstall.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnPlay
             // 
-            this.button2.Enabled = false;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(839, 539);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(230, 54);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Play !";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.Location = new System.Drawing.Point(691, 539);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(230, 54);
+            this.btnPlay.TabIndex = 18;
+            this.btnPlay.Text = "Play !";
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -264,17 +263,29 @@
             this.lblIsCompleted.TabIndex = 21;
             this.lblIsCompleted.Text = "(Completed)";
             // 
+            // btnStore
+            // 
+            this.btnStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStore.Location = new System.Drawing.Point(965, 539);
+            this.btnStore.Name = "btnStore";
+            this.btnStore.Size = new System.Drawing.Size(230, 54);
+            this.btnStore.TabIndex = 22;
+            this.btnStore.Text = "Store";
+            this.btnStore.UseVisualStyleBackColor = true;
+            this.btnStore.Click += new System.EventHandler(this.btnStore_Click);
+            // 
             // frm_steamLibrary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btnStore);
             this.Controls.Add(this.lblIsCompleted);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblNumberOfGames);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPlay);
+            this.Controls.Add(this.btnInstall);
             this.Controls.Add(this.lblIsIntalled);
             this.Controls.Add(this.lblNM);
             this.Controls.Add(this.lblAchievementDescription);
@@ -313,11 +324,12 @@
         private System.Windows.Forms.Label lblAchievementDescription;
         private System.Windows.Forms.Label lblNM;
         private System.Windows.Forms.Label lblIsIntalled;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInstall;
+        private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblNumberOfGames;
         private System.Windows.Forms.Label lblIsCompleted;
+        private System.Windows.Forms.Button btnStore;
     }
 }
 

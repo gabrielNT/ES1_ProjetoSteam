@@ -70,6 +70,10 @@ namespace SteamLibrary
         {
             return this.version;
         }
+        public int getGameID()
+        {
+            return this.gameID;
+        }
 
         public virtual int GetAdditionalSoftwareRequired()
         {

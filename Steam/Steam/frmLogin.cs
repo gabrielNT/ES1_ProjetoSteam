@@ -48,7 +48,7 @@ namespace SteamLibrary
             }
             catch 
             {
-                MessageBox.Show("The specified user does not exist");
+                MessageBox.Show("Invalid username or password");
                 frmLogin_Load(new object(), new EventArgs());
             }
 

@@ -68,7 +68,7 @@
             this.lblOwned.AutoSize = true;
             this.lblOwned.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOwned.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblOwned.Location = new System.Drawing.Point(701, 121);
+            this.lblOwned.Location = new System.Drawing.Point(950, 121);
             this.lblOwned.Name = "lblOwned";
             this.lblOwned.Size = new System.Drawing.Size(119, 29);
             this.lblOwned.TabIndex = 35;
@@ -166,6 +166,8 @@
             this.lblPrice.Size = new System.Drawing.Size(118, 37);
             this.lblPrice.TabIndex = 44;
             this.lblPrice.Text = "US$x,x";
+            this.lblPrice.TextChanged += new System.EventHandler(this.lblPrice_TextChanged);
+            this.lblPrice.Click += new System.EventHandler(this.lblPrice_Click);
             // 
             // frmStore
             // 

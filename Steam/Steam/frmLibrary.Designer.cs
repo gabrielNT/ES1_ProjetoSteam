@@ -132,7 +132,7 @@
             this.lblHoursPlayed.Name = "lblHoursPlayed";
             this.lblHoursPlayed.Size = new System.Drawing.Size(97, 29);
             this.lblHoursPlayed.TabIndex = 7;
-            this.lblHoursPlayed.Text = "1000.00";
+            this.lblHoursPlayed.Text = "N";
             this.lblHoursPlayed.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label4
@@ -164,10 +164,11 @@
             // cmbAchievements
             // 
             this.cmbAchievements.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cmbAchievements.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAchievements.FormattingEnabled = true;
-            this.cmbAchievements.Location = new System.Drawing.Point(691, 330);
+            this.cmbAchievements.Location = new System.Drawing.Point(725, 325);
             this.cmbAchievements.Name = "cmbAchievements";
-            this.cmbAchievements.Size = new System.Drawing.Size(121, 21);
+            this.cmbAchievements.Size = new System.Drawing.Size(196, 28);
             this.cmbAchievements.TabIndex = 13;
             this.cmbAchievements.SelectedIndexChanged += new System.EventHandler(this.cmbAchievements_SelectedIndexChanged);
             // 
@@ -180,9 +181,9 @@
             this.lblAchievementDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblAchievementDescription.Location = new System.Drawing.Point(421, 429);
             this.lblAchievementDescription.Name = "lblAchievementDescription";
-            this.lblAchievementDescription.Size = new System.Drawing.Size(783, 31);
+            this.lblAchievementDescription.Size = new System.Drawing.Size(275, 31);
             this.lblAchievementDescription.TabIndex = 14;
-            this.lblAchievementDescription.Text = "label1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            this.lblAchievementDescription.Text = "AchievementDescription";
             // 
             // lblNM
             // 
@@ -191,20 +192,18 @@
             this.lblNM.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblNM.Location = new System.Drawing.Point(585, 321);
             this.lblNM.Name = "lblNM";
-            this.lblNM.Size = new System.Drawing.Size(98, 29);
+            this.lblNM.Size = new System.Drawing.Size(0, 29);
             this.lblNM.TabIndex = 15;
-            this.lblNM.Text = "( N / M )";
             // 
             // lblIsIntalled
             // 
             this.lblIsIntalled.AutoSize = true;
             this.lblIsIntalled.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIsIntalled.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIsIntalled.Location = new System.Drawing.Point(686, 106);
+            this.lblIsIntalled.Location = new System.Drawing.Point(720, 106);
             this.lblIsIntalled.Name = "lblIsIntalled";
-            this.lblIsIntalled.Size = new System.Drawing.Size(175, 29);
+            this.lblIsIntalled.Size = new System.Drawing.Size(0, 29);
             this.lblIsIntalled.TabIndex = 16;
-            this.lblIsIntalled.Text = "( Not Installed )";
             // 
             // btnInstall
             // 
@@ -257,11 +256,10 @@
             this.lblIsCompleted.AutoSize = true;
             this.lblIsCompleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIsCompleted.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIsCompleted.Location = new System.Drawing.Point(649, 375);
+            this.lblIsCompleted.Location = new System.Drawing.Point(953, 325);
             this.lblIsCompleted.Name = "lblIsCompleted";
-            this.lblIsCompleted.Size = new System.Drawing.Size(148, 29);
+            this.lblIsCompleted.Size = new System.Drawing.Size(0, 29);
             this.lblIsCompleted.TabIndex = 21;
-            this.lblIsCompleted.Text = "(Completed)";
             // 
             // btnStore
             // 

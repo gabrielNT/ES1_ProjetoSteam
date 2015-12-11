@@ -49,9 +49,11 @@ namespace SteamLibrary
 
                 lblNumberOfGames.Text = numberofGames.ToString();               
            
-                lblGameName.Text = userGames[0].GetName();
-                lblHoursPlayed.Text = userGames[0].GetHoursPlayed().ToString();
-                lblDescription.Text = userGames[0].getDescription();
+                //lblGameName.Text = userGames[0].GetName();
+                //lblHoursPlayed.Text = userGames[0].GetHoursPlayed().ToString();
+                //lblDescription.Text = userGames[0].getDescription();
+                //lblAchievementName.Text = userGames[0].achievementsvector[0].name;
+                //lblAchievementDescription.Text = userGames[0].achievementsvector[0].description;
             }
             else
             { 

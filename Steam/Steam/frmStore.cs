@@ -48,7 +48,7 @@ namespace SteamLibrary
                     if (gameArray[j] == storeGames[0].GetName())
                         lblOwned.Text = "Owned";
 
-                lblPrice.Text = Convert.ToString(storeGames[0].getPrice());
+                lblPrice.Text = "R$ "+ Convert.ToString(storeGames[0].getPrice());
                 lblGameName.Text = storeGames[0].GetName();
                 lblDescription.Text = storeGames[0].getDescription();
             }
@@ -155,7 +155,16 @@ namespace SteamLibrary
                 if (gameArray[j] == storeGames[i].GetName())
                     lblOwned.Text = "Owned";
 
-            lblPrice.Text = Convert.ToString(storeGames[i].getPrice());           
+            lblPrice.Text = "R$ " + Convert.ToString(storeGames[i].getPrice());           
          }
+
+        private void lblPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrice_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

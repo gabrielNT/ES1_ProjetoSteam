@@ -76,7 +76,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(138, 29);
             this.txtEmail.TabIndex = 10;
-            this.txtEmail.UseSystemPasswordChar = true;
             // 
             // txtRptPassword
             // 
@@ -85,6 +84,7 @@
             this.txtRptPassword.Name = "txtRptPassword";
             this.txtRptPassword.Size = new System.Drawing.Size(138, 29);
             this.txtRptPassword.TabIndex = 9;
+            this.txtRptPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -141,7 +141,6 @@
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(138, 29);
             this.txtZipCode.TabIndex = 23;
-            this.txtZipCode.UseSystemPasswordChar = true;
             // 
             // txtCity
             // 
@@ -178,7 +177,6 @@
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(138, 29);
             this.txtState.TabIndex = 19;
-            this.txtState.UseSystemPasswordChar = true;
             // 
             // txtCountry
             // 

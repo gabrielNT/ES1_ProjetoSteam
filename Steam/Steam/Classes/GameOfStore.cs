@@ -18,11 +18,14 @@ namespace SteamLibrary {
 		    set;
 	    }
 
-	    private int unitSold
-	    {
-		    get;
-		    set;
-	    }
+	    private int unitSold;
+
+        public int UnitSold
+        {
+          get { return unitSold; }
+          set { unitSold = value; }
+        }
+	   
 
 	    private int numberOfReviews
 	    {
@@ -47,20 +50,15 @@ namespace SteamLibrary {
 		    return this.price;
 	    }
 
-	    public int getUnitSold()
-	    {
-            return this.unitSold;
-	    }
+        //private int getNumberOfReviews()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-	    private int getNumberOfReviews()
-	    {
-		    throw new System.NotImplementedException();
-	    }
-
-	    private float getPositiveReviesPercentage()
-	    {
-		    throw new System.NotImplementedException();
-	    }
+        //private float getPositiveReviesPercentage()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         public GameOfStore(int ID,float price, int unitsSold)
         {

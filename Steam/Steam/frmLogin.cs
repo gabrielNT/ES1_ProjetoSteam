@@ -34,6 +34,12 @@ namespace SteamLibrary
             try
             {
                 frm_steamLibrary libraryForm = new frm_steamLibrary();
+                if (txtPassword.Text.Length < 3)
+                {
+                    MessageBox.Show("Password must have at least 3 characters");
+                    frmLogin_Load(new object(), new EventArgs());
+                    return;
+                }
                 libraryForm.usuario = new User(txtUsername.Text, txtPassword.Text);
                 this.Hide();
                 libraryForm.ShowDialog();
@@ -64,6 +70,14 @@ namespace SteamLibrary
                 signup.ShowDialog();
                 this.Show();
                 frmLogin_Load(new object(), new EventArgs());
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+                btnSignInClick(new object(), new EventArgs());
             }
         }
     }

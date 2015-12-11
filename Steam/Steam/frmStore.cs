@@ -49,7 +49,6 @@ namespace SteamLibrary
                         lblOwned.Text = "Owned";
 
                 lblPrice.Text = Convert.ToString(storeGames[0].getPrice());
-                lblUnitsSold.Text = Convert.ToString(storeGames[0].getUnitSold());
                 lblGameName.Text = storeGames[0].GetName();
                 lblDescription.Text = storeGames[0].getDescription();
             }
@@ -94,48 +93,54 @@ namespace SteamLibrary
             if (dialogResult == DialogResult.Yes)
             {
                 //compra
-                int i = lbGames.SelectedIndex;
-                string gameName = storeGames[i].GetName();
-
-                DBSteamDataSet db = new DBSteamDataSet();
-                DBSteamDataSetTableAdapters.GameOfLibraryTableAdapter GameOfLibraryTableAdapter = new DBSteamDataSetTableAdapters.GameOfLibraryTableAdapter();
-
-                DBSteamDataSet.GameOfLibraryRow newGameOfLibraryRow = db.GameOfLibrary.NewGameOfLibraryRow();
-
-
-                DBSteamDataSetTableAdapters.AchievementOfLibraryTableAdapter AchievementOfLibraryTableAdapter = new DBSteamDataSetTableAdapters.AchievementOfLibraryTableAdapter();
-
-                DBSteamDataSet.GameOfLibraryRow newAchievementOfLibraryRow = db.GameOfLibrary.NewGameOfLibraryRow();
-                GameOfLibraryTableAdapter.Insert(0, userID, storeGames[i].getGameID());
-
-                int achID;
-                int gameOfLibraryID = 0;
-                int j = 0;
-
-                SqlDataReader MineReader = DatabaseAccess.getDataFromDB("SELECT ID FROM [GameOfLibrary] WHERE userID ='" + Convert.ToString(userID) + "' AND gameID = '" + storeGames[i].getGameID() + "'");
-                if (MineReader.Read())
+                if (lblOwned.Text != "Owned")
                 {
-                    gameOfLibraryID = Convert.ToInt32(MineReader["ID"].ToString());
-                }
+                    int i = lbGames.SelectedIndex;
+                    string gameName = storeGames[i].GetName();
 
-                while(true)
-                try
-                {
-                    achID= storeGames[i].achievementsvector[j].ID;
-                    AchievementOfLibraryTableAdapter.Insert(gameOfLibraryID,achID,0);
-                    j++;
-                }
-                catch
-                {
-                    break;
-                }
+                    DBSteamDataSet db = new DBSteamDataSet();
+                    DBSteamDataSetTableAdapters.GameOfLibraryTableAdapter GameOfLibraryTableAdapter = new DBSteamDataSetTableAdapters.GameOfLibraryTableAdapter();
+
+                    DBSteamDataSet.GameOfLibraryRow newGameOfLibraryRow = db.GameOfLibrary.NewGameOfLibraryRow();
 
 
+                    DBSteamDataSetTableAdapters.AchievementOfLibraryTableAdapter AchievementOfLibraryTableAdapter = new DBSteamDataSetTableAdapters.AchievementOfLibraryTableAdapter();
+
+                    DBSteamDataSet.GameOfLibraryRow newAchievementOfLibraryRow = db.GameOfLibrary.NewGameOfLibraryRow();
+                    GameOfLibraryTableAdapter.Insert(0, userID, storeGames[i].getGameID());
+
+                    int achID;
+                    int gameOfLibraryID = 0;
+                    int j = 0;
+
+                    SqlDataReader MineReader = DatabaseAccess.getDataFromDB("SELECT ID FROM [GameOfLibrary] WHERE userID ='" + Convert.ToString(userID) + "' AND gameID = '" + storeGames[i].getGameID() + "'");
+                    if (MineReader.Read())
+                    {
+                        gameOfLibraryID = Convert.ToInt32(MineReader["ID"].ToString());
+                    }
+
+                    while (true)
+                        try
+                        {
+                            achID = storeGames[i].achievementsvector[j].ID;
+                            AchievementOfLibraryTableAdapter.Insert(gameOfLibraryID, achID, 0);
+                            j++;
+                        }
+                        catch
+                        {
+                            break;
+                        }
+
+                    MessageBox.Show("Sale succeeded");
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("You already have the selected game");
                 
             }
             else
             {
-                //volta pra store
+                MessageBox.Show("Sale cancelled");
             }
         }
 
@@ -150,8 +155,7 @@ namespace SteamLibrary
                 if (gameArray[j] == storeGames[i].GetName())
                     lblOwned.Text = "Owned";
 
-            lblPrice.Text = Convert.ToString(storeGames[i].getPrice());
-            lblUnitsSold.Text = Convert.ToString(storeGames[i].getUnitSold());
+            lblPrice.Text = Convert.ToString(storeGames[i].getPrice());           
          }
     }
 }

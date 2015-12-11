@@ -12,7 +12,7 @@ namespace SteamLibrary
     public static class ExternalDefinitions
     {
         public static string connectionString = @"Data Source=(LocalDB)\v11.0;" +
-                                                @"AttachDbFilename=C:\olar\DBSteam.mdf;
+                                                @"AttachDbFilename=C:\Steam\DBSteam.mdf;
                                                 Integrated Security=True;Connect Timeout=30";
     }
 }

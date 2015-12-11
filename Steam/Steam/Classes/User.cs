@@ -57,11 +57,11 @@ namespace SteamLibrary
             set;
         }
 
-        public virtual IEnumerable<GameOfLibrary> GameOfLibrary
-        {
-            get;
-            set;
-        }
+        //public virtual IEnumerable<GameOfLibrary> GameOfLibrary
+        //{
+        //    get;
+        //    set;
+        //}
 
         //public virtual IEnumerable<Address> Address
         //{
@@ -87,10 +87,10 @@ namespace SteamLibrary
         //    set;
         //}
 
-        private bool VerifyUserCredentials(string email, string password)
-        {
-            throw new System.NotImplementedException();
-        }
+        //private bool VerifyUserCredentials(string email, string password)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         public int getID()
         {
@@ -102,10 +102,10 @@ namespace SteamLibrary
             return this.userName;
         }
 
-        public virtual int VerifyUserSoftwares()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual int VerifyUserSoftwares()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         //public User(string name, string password, string phoneNumber, Address address)
         //{
@@ -118,7 +118,6 @@ namespace SteamLibrary
 
         public User(string email, string password)
         {
-            //SqlConnection con = DBAccess();
             
             SqlDataReader MyReader = DatabaseAccess.getDataFromDB("SELECT * FROM [User] WHERE userName LIKE '" + email + "' AND password LIKE '" + password + "'");
             if (MyReader != null)
@@ -139,51 +138,51 @@ namespace SteamLibrary
             }
         }
 
-        public virtual bool VerifyConfirmationCode(string code)
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool VerifyConfirmationCode(string code)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        private bool VerifyEmailAvailability(string email)
-        {
-            throw new System.NotImplementedException();
-        }
+        //private bool VerifyEmailAvailability(string email)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool AddGameToLibrary(Game game)
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool AddGameToLibrary(Game game)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        private bool SendConfirmationCode(int code)
-        {
-            throw new System.NotImplementedException();
-        }
+        //private bool SendConfirmationCode(int code)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool ChangePassword(string old, string neww)
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool ChangePassword(string old, string neww)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        private bool SendPasswordToken(int token)
-        {
-            throw new System.NotImplementedException();
-        }
+        //private bool SendPasswordToken(int token)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool VerifyPasswordToken(int token)
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool VerifyPasswordToken(int token)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool ChangePrivacySettings(int change)
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool ChangePrivacySettings(int change)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
 
-        public virtual int GetPrivacySettings()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual int GetPrivacySettings()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         public static bool exists(string email)
         {

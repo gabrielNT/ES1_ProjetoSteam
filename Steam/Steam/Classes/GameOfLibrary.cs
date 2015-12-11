@@ -40,65 +40,67 @@ namespace SteamLibrary
 
         public bool[] AchievementsUnlocked;
 
-        public virtual bool CheckInstallation()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool CheckInstallation()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool StartGame()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool StartGame()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool InstallGame()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool InstallGame()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool InstallAdditionalSoftware()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool InstallAdditionalSoftware()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual int CheckAdditionalSoftware()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual int CheckAdditionalSoftware()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool UninstallGame()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool UninstallGame()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool StopGame()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool StopGame()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool IsUpToDate()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool IsUpToDate()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool UpdateGame()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool UpdateGame()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
-        public virtual bool SaveGOFToDB()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual bool SaveGOFToDB()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         public float GetHoursPlayed()
         {
             return this.HoursPlayed;
         }
+
         private int userID;
-        public virtual string RetrieveSavedGame()
-        {
-            throw new System.NotImplementedException();
-        }
+
+        //public virtual string RetrieveSavedGame()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         public GameOfLibrary(int GameID, float hours, int GLID, int userID)
         {

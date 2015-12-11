@@ -952,8 +952,6 @@ namespace SteamLibrary {
             
             private global::System.Data.DataColumn columnname;
             
-            private global::System.Data.DataColumn columnisCompleted;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public AchievementDataTable() {
@@ -1021,14 +1019,6 @@ namespace SteamLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn isCompletedColumn {
-                get {
-                    return this.columnisCompleted;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1064,14 +1054,13 @@ namespace SteamLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AchievementRow AddAchievementRow(GameRow parentGameRowByFK_Achievement_Game, string description, string name, int isCompleted) {
+            public AchievementRow AddAchievementRow(GameRow parentGameRowByFK_Achievement_Game, string description, string name) {
                 AchievementRow rowAchievementRow = ((AchievementRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         description,
-                        name,
-                        isCompleted};
+                        name};
                 if ((parentGameRowByFK_Achievement_Game != null)) {
                     columnValuesArray[0] = parentGameRowByFK_Achievement_Game[0];
                 }
@@ -1108,7 +1097,6 @@ namespace SteamLibrary {
                 this.columnID = base.Columns["ID"];
                 this.columndescription = base.Columns["description"];
                 this.columnname = base.Columns["name"];
-                this.columnisCompleted = base.Columns["isCompleted"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1122,8 +1110,6 @@ namespace SteamLibrary {
                 base.Columns.Add(this.columndescription);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
-                this.columnisCompleted = new global::System.Data.DataColumn("isCompleted", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnisCompleted);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columngameID.AllowDBNull = false;
@@ -1137,7 +1123,6 @@ namespace SteamLibrary {
                 this.columndescription.MaxLength = 200;
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 50;
-                this.columnisCompleted.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6160,17 +6145,6 @@ namespace SteamLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int isCompleted {
-                get {
-                    return ((int)(this[this.tableAchievement.isCompletedColumn]));
-                }
-                set {
-                    this[this.tableAchievement.isCompletedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public GameRow GameRow {
                 get {
                     return ((GameRow)(this.GetParentRow(this.Table.ParentRelations["FK_Achievement_Game"])));
@@ -8334,43 +8308,38 @@ namespace SteamLibrary.DBSteamDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("description", "description");
             tableMapping.ColumnMappings.Add("name", "name");
-            tableMapping.ColumnMappings.Add("isCompleted", "isCompleted");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Achievement] WHERE (([gameID] = @Original_gameID) AND ([ID] = " +
                 "@Original_ID) AND ([description] = @Original_description) AND ([name] = @Origina" +
-                "l_name) AND ([isCompleted] = @Original_isCompleted))";
+                "l_name))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gameID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gameID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isCompleted", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isCompleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Achievement] ([gameID], [description], [name], [isCompleted]) " +
-                "VALUES (@gameID, @description, @name, @isCompleted);\r\nSELECT gameID, ID, descrip" +
-                "tion, name, isCompleted FROM Achievement WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Achievement] ([gameID], [description], [name]) VALUES (@gameID" +
+                ", @description, @name);\r\nSELECT gameID, ID, description, name FROM Achievement W" +
+                "HERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gameID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gameID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isCompleted", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isCompleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Achievement] SET [gameID] = @gameID, [description] = @description, [name] = @name, [isCompleted] = @isCompleted WHERE (([gameID] = @Original_gameID) AND ([ID] = @Original_ID) AND ([description] = @Original_description) AND ([name] = @Original_name) AND ([isCompleted] = @Original_isCompleted));
-SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Achievement] SET [gameID] = @gameID, [description] = @description, [name] = @name WHERE (([gameID] = @Original_gameID) AND ([ID] = @Original_ID) AND ([description] = @Original_description) AND ([name] = @Original_name));
+SELECT gameID, ID, description, name FROM Achievement WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gameID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gameID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isCompleted", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isCompleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gameID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gameID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isCompleted", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isCompleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -8387,7 +8356,7 @@ SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT gameID, ID, description, name, isCompleted FROM dbo.Achievement";
+            this._commandCollection[0].CommandText = "SELECT gameID, ID, description, name FROM dbo.Achievement";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8448,7 +8417,7 @@ SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_gameID, int Original_ID, string Original_description, string Original_name, int Original_isCompleted) {
+        public virtual int Delete(int Original_gameID, int Original_ID, string Original_description, string Original_name) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_gameID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID));
             if ((Original_description == null)) {
@@ -8463,7 +8432,6 @@ SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_name));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_isCompleted));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8484,7 +8452,7 @@ SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int gameID, string description, string name, int isCompleted) {
+        public virtual int Insert(int gameID, string description, string name) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(gameID));
             if ((description == null)) {
                 throw new global::System.ArgumentNullException("description");
@@ -8498,7 +8466,6 @@ SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(name));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(isCompleted));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8519,7 +8486,7 @@ SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int gameID, string description, string name, int isCompleted, int Original_gameID, int Original_ID, string Original_description, string Original_name, int Original_isCompleted, int ID) {
+        public virtual int Update(int gameID, string description, string name, int Original_gameID, int Original_ID, string Original_description, string Original_name, int ID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(gameID));
             if ((description == null)) {
                 throw new global::System.ArgumentNullException("description");
@@ -8533,23 +8500,21 @@ SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(name));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(isCompleted));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_gameID));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_gameID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID));
             if ((Original_description == null)) {
                 throw new global::System.ArgumentNullException("Original_description");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_description));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_description));
             }
             if ((Original_name == null)) {
                 throw new global::System.ArgumentNullException("Original_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_name));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_name));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_isCompleted));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(ID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8570,8 +8535,8 @@ SELECT gameID, ID, description, name, isCompleted FROM Achievement WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int gameID, string description, string name, int isCompleted, int Original_gameID, int Original_ID, string Original_description, string Original_name, int Original_isCompleted) {
-            return this.Update(gameID, description, name, isCompleted, Original_gameID, Original_ID, Original_description, Original_name, Original_isCompleted, Original_ID);
+        public virtual int Update(int gameID, string description, string name, int Original_gameID, int Original_ID, string Original_description, string Original_name) {
+            return this.Update(gameID, description, name, Original_gameID, Original_ID, Original_description, Original_name, Original_ID);
         }
     }
     

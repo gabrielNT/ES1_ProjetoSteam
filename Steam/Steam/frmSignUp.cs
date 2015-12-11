@@ -49,7 +49,6 @@ namespace SteamLibrary
                 MessageBox.Show(errorString);
             else
             {
-                //coloca no banco!
                 DBSteamDataSet db = new DBSteamDataSet();
                 DBSteamDataSetTableAdapters.UserTableAdapter userTableAdapter =
                             new DBSteamDataSetTableAdapters.UserTableAdapter();
@@ -58,16 +57,6 @@ namespace SteamLibrary
                             new DBSteamDataSetTableAdapters.AddressTableAdapter();
 
                 DBSteamDataSet.UserRow newUserRow = db.User.NewUserRow();
-                //newUserRow.email = txtEmail.Text;
-                //newUserRow.phoneNumber = txtPhoneNumber.Text;
-                //newUserRow.userName = typedUsername;
-                //newUserRow.numberOfGames = 0;
-                //newUserRow.password = typedPassword;
-                //newUserRow.EndEdit();
-                //// Add the row to the Region table 
-                //db.User.Rows.Add(newUserRow);
-                //// Save the new row to the database
-                //userTableAdapter.Update(db);
                 userTableAdapter.Insert(txtEmail.Text, 0, typedPassword, txtPhoneNumber.Text, 0, typedUsername);
 
                  SqlDataReader MineReader = DatabaseAccess.getDataFromDB("SELECT ID FROM [User] WHERE userName LIKE '" + typedUsername + "'");
@@ -76,13 +65,6 @@ namespace SteamLibrary
                  {
                      id = Convert.ToInt32(MineReader["ID"].ToString());
                      DBSteamDataSet.AddressRow newAddressRow = db.Address.NewAddressRow();
-                     //newAddressRow.userID = id;
-                     //newAddressRow.zipCode = txtZipCode.Text;
-                     //newAddressRow.city = txtCity.Text;
-                     //newAddressRow.state = txtState.Text;
-                     //newAddressRow.country = txtCountry.Text;
-                     //newAddressRow.Address = "default";
-                     //db.Address.Rows.Add(newAddressRow);
                      addressTableAdapter.Insert(id,txtCity.Text,txtCountry.Text,txtState.Text,txtZipCode.Text,"default");
                  }
                  MessageBox.Show("Account successfully created!");

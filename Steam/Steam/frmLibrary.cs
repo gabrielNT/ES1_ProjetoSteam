@@ -146,7 +146,6 @@ namespace SteamLibrary
 
         private void frm_steamLibrary_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //this.Parent.Show();
         }
 
         private void rb3_MouseClick(object sender, MouseEventArgs e)

@@ -45,6 +45,15 @@ namespace SteamLibrary
 
         }
 
+        public static void changeFromDB(string command)
+        {
+            databaseConnection();
+
+            SqlCommand change = new SqlCommand(command, con);
+
+            return;
+        }
+
         public static void CloseConnection()
         {
             myReader.Close();

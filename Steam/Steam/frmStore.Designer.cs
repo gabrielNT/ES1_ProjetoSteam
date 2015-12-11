@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPlay = new System.Windows.Forms.Button();
-            this.btnInstall = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.lblOwned = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblGameName = new System.Windows.Forms.Label();
@@ -39,31 +39,29 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.lblUnitsSold = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnPlay
+            // btnBack
             // 
-            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay.Location = new System.Drawing.Point(867, 554);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(230, 54);
-            this.btnPlay.TabIndex = 37;
-            this.btnPlay.Text = "Back to Library";
-            this.btnPlay.UseVisualStyleBackColor = true;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(867, 554);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(230, 54);
+            this.btnBack.TabIndex = 37;
+            this.btnBack.Text = "Back to Library";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // btnInstall
+            // btnBuy
             // 
-            this.btnInstall.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInstall.Location = new System.Drawing.Point(470, 554);
-            this.btnInstall.Name = "btnInstall";
-            this.btnInstall.Size = new System.Drawing.Size(230, 54);
-            this.btnInstall.TabIndex = 36;
-            this.btnInstall.Text = "Buy!";
-            this.btnInstall.UseVisualStyleBackColor = true;
-            this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
+            this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuy.Location = new System.Drawing.Point(470, 554);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(230, 54);
+            this.btnBuy.TabIndex = 36;
+            this.btnBuy.Text = "Buy!";
+            this.btnBuy.UseVisualStyleBackColor = true;
+            this.btnBuy.Click += new System.EventHandler(this.btnInstall_Click);
             // 
             // lblOwned
             // 
@@ -169,44 +167,17 @@
             this.lblPrice.TabIndex = 44;
             this.lblPrice.Text = "US$x,x";
             // 
-            // lblUnitsSold
-            // 
-            this.lblUnitsSold.AutoSize = true;
-            this.lblUnitsSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnitsSold.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUnitsSold.Location = new System.Drawing.Point(948, 121);
-            this.lblUnitsSold.MaximumSize = new System.Drawing.Size(97, 29);
-            this.lblUnitsSold.MinimumSize = new System.Drawing.Size(97, 29);
-            this.lblUnitsSold.Name = "lblUnitsSold";
-            this.lblUnitsSold.Size = new System.Drawing.Size(97, 29);
-            this.lblUnitsSold.TabIndex = 46;
-            this.lblUnitsSold.Text = "1000";
-            this.lblUnitsSold.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(1039, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 29);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "units sold";
-            // 
             // frmStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.lblUnitsSold);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnPlay);
-            this.Controls.Add(this.btnInstall);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.lblOwned);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblGameName);
@@ -223,8 +194,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnPlay;
-        private System.Windows.Forms.Button btnInstall;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnBuy;
         private System.Windows.Forms.Label lblOwned;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblGameName;
@@ -234,7 +205,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lblUnitsSold;
-        private System.Windows.Forms.Label label5;
     }
 }

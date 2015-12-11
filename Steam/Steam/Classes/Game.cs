@@ -54,17 +54,17 @@ namespace SteamLibrary
 
         public Achievements[] achievementsvector;
 
-        public virtual IEnumerable<CompatibleSystem> CompatibleSystem
-        {
-            get;
-            set;
-        }
+        //public virtual IEnumerable<CompatibleSystem> CompatibleSystem
+        //{
+        //    get;
+        //    set;
+        //}
 
-        public virtual IEnumerable<AdditionalSoftware> AdditionalSoftware
-        {
-            get;
-            set;
-        }
+        //public virtual IEnumerable<AdditionalSoftware> AdditionalSoftware
+        //{
+        //    get;
+        //    set;
+        //}
 
         public string GetVersion()
         {
@@ -75,10 +75,10 @@ namespace SteamLibrary
             return this.gameID;
         }
 
-        public virtual int GetAdditionalSoftwareRequired()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public virtual int GetAdditionalSoftwareRequired()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         protected bool GetGameInformationFromDB()
         {
@@ -95,7 +95,7 @@ namespace SteamLibrary
             this.name = MyReader["name"].ToString();
             DatabaseAccess.CloseConnection();
 
-            // ACHIEVEMENTS DO JOGO
+            // Game Achievements
             SqlDataReader MyReader2 = DatabaseAccess.getDataFromDB("SELECT * FROM [Achievement] WHERE gameID = '" + this.gameID.ToString() + "' ORDER BY ID");
             int i = 0;
             this.achievementsvector = new Achievements[30];

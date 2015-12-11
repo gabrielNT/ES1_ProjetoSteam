@@ -37,17 +37,15 @@
             this.lblHoursPlayed = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblAchievementName = new System.Windows.Forms.Label();
-            this.rb1 = new System.Windows.Forms.RadioButton();
-            this.rb2 = new System.Windows.Forms.RadioButton();
-            this.rb3 = new System.Windows.Forms.RadioButton();
             this.cmbAchievements = new System.Windows.Forms.ComboBox();
             this.lblAchievementDescription = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblNM = new System.Windows.Forms.Label();
             this.lblIsIntalled = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblNumberOfGames = new System.Windows.Forms.Label();
+            this.lblIsCompleted = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbGames
@@ -155,57 +153,18 @@
             this.lblAchievementName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAchievementName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAchievementName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAchievementName.Location = new System.Drawing.Point(421, 398);
+            this.lblAchievementName.Location = new System.Drawing.Point(421, 373);
             this.lblAchievementName.Name = "lblAchievementName";
             this.lblAchievementName.Size = new System.Drawing.Size(204, 31);
             this.lblAchievementName.TabIndex = 9;
             this.lblAchievementName.Text = "AchivementName";
             this.lblAchievementName.Click += new System.EventHandler(this.label5_Click);
             // 
-            // rb1
-            // 
-            this.rb1.AutoSize = true;
-            this.rb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rb1.Location = new System.Drawing.Point(420, 363);
-            this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(44, 24);
-            this.rb1.TabIndex = 10;
-            this.rb1.TabStop = true;
-            this.rb1.Text = "All";
-            this.rb1.UseVisualStyleBackColor = true;
-            // 
-            // rb2
-            // 
-            this.rb2.AutoSize = true;
-            this.rb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rb2.Location = new System.Drawing.Point(470, 363);
-            this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(119, 24);
-            this.rb2.TabIndex = 11;
-            this.rb2.TabStop = true;
-            this.rb2.Text = "Not Acquired";
-            this.rb2.UseVisualStyleBackColor = true;
-            // 
-            // rb3
-            // 
-            this.rb3.AutoSize = true;
-            this.rb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rb3.Location = new System.Drawing.Point(595, 363);
-            this.rb3.Name = "rb3";
-            this.rb3.Size = new System.Drawing.Size(90, 24);
-            this.rb3.TabIndex = 12;
-            this.rb3.TabStop = true;
-            this.rb3.Text = "Acquired";
-            this.rb3.UseVisualStyleBackColor = true;
-            // 
             // cmbAchievements
             // 
             this.cmbAchievements.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cmbAchievements.FormattingEnabled = true;
-            this.cmbAchievements.Location = new System.Drawing.Point(691, 367);
+            this.cmbAchievements.Location = new System.Drawing.Point(691, 330);
             this.cmbAchievements.Name = "cmbAchievements";
             this.cmbAchievements.Size = new System.Drawing.Size(121, 21);
             this.cmbAchievements.TabIndex = 13;
@@ -224,16 +183,16 @@
             this.lblAchievementDescription.TabIndex = 14;
             this.lblAchievementDescription.Text = "label1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             // 
-            // label5
+            // lblNM
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(585, 321);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 29);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "( N / M )";
+            this.lblNM.AutoSize = true;
+            this.lblNM.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNM.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNM.Location = new System.Drawing.Point(585, 321);
+            this.lblNM.Name = "lblNM";
+            this.lblNM.Size = new System.Drawing.Size(98, 29);
+            this.lblNM.TabIndex = 15;
+            this.lblNM.Text = "( N / M )";
             // 
             // lblIsIntalled
             // 
@@ -267,6 +226,7 @@
             this.button2.TabIndex = 18;
             this.button2.Text = "Play !";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -293,23 +253,32 @@
             this.lblNumberOfGames.Text = "User:";
             this.lblNumberOfGames.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // lblIsCompleted
+            // 
+            this.lblIsCompleted.AutoSize = true;
+            this.lblIsCompleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsCompleted.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblIsCompleted.Location = new System.Drawing.Point(649, 375);
+            this.lblIsCompleted.Name = "lblIsCompleted";
+            this.lblIsCompleted.Size = new System.Drawing.Size(148, 29);
+            this.lblIsCompleted.TabIndex = 21;
+            this.lblIsCompleted.Text = "(Completed)";
+            // 
             // frm_steamLibrary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblIsCompleted);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblNumberOfGames);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblIsIntalled);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblNM);
             this.Controls.Add(this.lblAchievementDescription);
             this.Controls.Add(this.cmbAchievements);
-            this.Controls.Add(this.rb3);
-            this.Controls.Add(this.rb2);
-            this.Controls.Add(this.rb1);
             this.Controls.Add(this.lblAchievementName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblHoursPlayed);
@@ -340,17 +309,15 @@
         private System.Windows.Forms.Label lblHoursPlayed;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblAchievementName;
-        private System.Windows.Forms.RadioButton rb1;
-        private System.Windows.Forms.RadioButton rb2;
-        private System.Windows.Forms.RadioButton rb3;
         private System.Windows.Forms.ComboBox cmbAchievements;
         private System.Windows.Forms.Label lblAchievementDescription;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblNM;
         private System.Windows.Forms.Label lblIsIntalled;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblNumberOfGames;
+        private System.Windows.Forms.Label lblIsCompleted;
     }
 }
 

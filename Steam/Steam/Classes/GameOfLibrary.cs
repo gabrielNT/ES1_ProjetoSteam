@@ -38,7 +38,7 @@ namespace SteamLibrary
             set;
         }
 
-        private bool[] AchievementsUnlocked;
+        public bool[] AchievementsUnlocked;
 
         public virtual bool CheckInstallation()
         {
@@ -114,6 +114,7 @@ namespace SteamLibrary
         {
             SqlDataReader MyReader2 = DatabaseAccess.getDataFromDB("SELECT * FROM [AchievementOfLibrary] WHERE gameOfLibraryID = '" + this.ID + "'");
             int i = 0;
+            AchievementsUnlocked = new bool[30];
             while (MyReader2.Read())
             {
                 this.AchievementsUnlocked[i] = Convert.ToBoolean(Convert.ToInt32(MyReader2["isCompleted"].ToString()));

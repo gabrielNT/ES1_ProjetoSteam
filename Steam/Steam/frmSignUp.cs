@@ -49,6 +49,8 @@ namespace SteamLibrary
             else
             {
                 //coloca no banco!
+                MessageBox.Show("Account successfully created!");
+                this.Close();
             }                
         }
 

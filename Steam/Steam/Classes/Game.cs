@@ -94,6 +94,7 @@ namespace SteamLibrary
             // ACHIEVEMENTS DO JOGO
             SqlDataReader MyReader2 = DatabaseAccess.getDataFromDB("SELECT * FROM [Achievement] WHERE gameID = '" + this.gameID.ToString() + "' ORDER BY ID");
             int i = 0;
+            this.achievementsvector = new Achievements[30];
             while (MyReader2.Read())
             {
                 this.achievementsvector[i].ID = Convert.ToInt32(MyReader2["ID"].ToString());
